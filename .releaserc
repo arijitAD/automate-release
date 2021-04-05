@@ -11,6 +11,12 @@
             }
         ],
         [
+            "@semantic-release/npm",
+            {
+              "npmPublish": false
+           }
+        ],
+        [
             "@semantic-release/exec",
             {
                 "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
