@@ -1,5 +1,5 @@
 {
-    "branches": ['+([0-9])?(.{+([0-9]),x}).x', 'main', ':w:Wq', {name: 'feat/*', prerelease: true}, {name: 'fix/*', prerelease: true}, {name: 'development', prerelease: true}],
+    "branches": ["+([0-9])?(.{+([0-9]),x}).x", "main", "development"],
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
@@ -8,19 +8,6 @@
             {
                 "changelogFile": "CHANGELOG.md",
                 "changelogTitle": "# Semantic Versioning Changelog"
-            }
-        ],
-        [
-            "@semantic-release/npm",
-            {
-              "npmPublish": false,
-              "tarballDir": "dist"
-           }
-        ],
-        [
-            "@semantic-release/exec",
-            {
-                "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
             }
         ],
         [
